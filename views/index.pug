@@ -1,0 +1,62 @@
+//- format is taken from pug documentation 
+doctype html
+html
+  title Aruns Dance Academy
+  head 
+    style 
+        include ../static/style.css 
+    body 
+        nav#navbar 
+            ul 
+                div#logo 
+                    img(src="/static/img/logo.png")
+                    | ADA
+                li #[a(href="/") Home]
+                li #[a(href="/") Services]
+                li #[a(href="/") Contact us]
+                li #[a(href="/") About]
+                li #[a(href="/") Class Info]
+
+    section#intro 
+        div Welcome to Arun's Dance Academy 
+        div.small Eat Sleep and Practise 
+
+    section#mission 
+        h2 Our Mission 
+        div.card 
+            div.card-box 
+                div.card-img 
+                    img(src="/static/img/dance2.png")
+                div.card-content 
+                    h3 Offer Diverse Dance Programs
+                    p Provide a range of dance styles and levels to cater to the interests and skill levels of different students, such as ballet, hip-hop, contemporary, jazz, tap, etc.
+            
+        div.card 
+            div.card-box 
+                div.card-img 
+                    img(src="/static/img/dance4.png")
+                div.card-content 
+                    h3 Recruit and Retain Students
+                    p Attract new students to enroll in classes while ensuring current students remain engaged and committed.
+
+        div.card 
+            div.card-box 
+                div.card-img 
+                    img(src="/static/img/dance3.png")
+                div.card-content 
+                    h3 Create a Safe and Supportive Environment
+                    p Foster a welcoming and inclusive atmosphere where students feel comfortable.
+    section#sponsor 
+        h2 Our Sponsors 
+        div#sponsors  
+            img(src="/static/img/logo2.png" , class="sp-img")
+            img(src="/static/img/logo3.png" , class="sp-img")
+            img(src="/static/img/logo4.png" , class="sp-img")
+            img(src="/static/img/logo5.png" , class="sp-img")
+
+
+    footer#foot 
+        | Copyright © 2024 ArunsDanceAcademy.com | All rights reserved 
+
+        script 
+            include ../static/index.js 

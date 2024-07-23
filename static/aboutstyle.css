@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-items: center;
+}
+
+.box {
+    background-color: brown;
+    border: 2px solid black;
+    width: 70%;
+    height: 307px;
+    margin: 2px 3px;
+    border-radius: 48px;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    padding: 23px 25px;
+}

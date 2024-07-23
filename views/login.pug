@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    script(src='https://kit.fontawesome.com/f2804dabab.js', crossorigin='anonymous')
+    style 
+        include ../static/login.css 
+    title Login to my website
+  body
+    div.container
+      form(action='/login', method='POST')
+        h2 Login
+        .box
+          i.fa-solid.fa-user
+          input(type='text', name='username', id='username', placeholder='enter your username')
+        .box
+          i.fa-solid.fa-lock
+          input(type='password', name='password', id='password', placeholder='enter your password')
+        button.btn(type='submit') Sign In

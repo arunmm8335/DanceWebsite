@@ -1,0 +1,35 @@
+h1 {
+    text-align: center;
+    color: chocolate;
+}
+
+.container {
+    background: center / cover no-repeat url(/static/img/bg3.jpg);
+    opacity: 1;
+}
+
+.myform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.myInput {
+    width: 50%;
+    margin: 5px auto;
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 2px 7px;
+    background-color: black;
+    color: #95f800;
+}
+
+.btn {
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: #20221d;
+    padding: 14px 44px;
+    margin: 5px 13px;
+    color: #5c4545;
+}

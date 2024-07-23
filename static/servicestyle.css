@@ -1,0 +1,59 @@
+.container {
+    height: 315vh;
+}
+
+
+.box1 {
+    height: 400px;
+    background: center / cover no-repeat url(/static/img/hiphop.jpg);
+}
+
+.box2 {
+    height: 450px;
+    background: center / cover no-repeat url(/static/img/bharatnatyam.jpg);
+}
+
+
+.box3 {
+    height: 450px;
+    background: center / cover no-repeat url(/static/img/modern.jpeg);
+}
+
+
+.box4 {
+    height: 450px;
+    background: center / cover no-repeat url(/static/img/swing.jpeg);
+}
+
+h2 {
+    text-align: center;
+}
+.info {
+    color: rgb(255 247 247);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 9%;
+    position: relative;
+    left: 945px;
+    top: 30px;
+}
+
+h2 {
+    text-align: center;
+    border: 2px solid red;
+    border-radius: 43px;
+    padding: 9px 39px;
+}
+
+.info1 {
+    color: rgb(197, 177, 177);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 80px 260px;
+    margin: 0 41px;
+    width: 25%;
+}

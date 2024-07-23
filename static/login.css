@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background: center/cover no-repeat url('/static/login.jpg');
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 180px;
+}
+
+#username,
+#password {
+  padding: 6px 52px;
+  margin: 4px 8px;
+  border: 2px solid black;
+  border-radius: 47px;
+  color: #3fff05;
+  background-color: black;
+}
+
+h2 {
+  color: #da7e7e;
+}
+
+.btn {
+  padding: 0px 15px;
+  margin-top: 2px;
+  border: 2px solid black;
+  border-radius: 12px;
+  position: relative;
+  left: 4px;
+  color: lime;
+  background-color: black;
+}
