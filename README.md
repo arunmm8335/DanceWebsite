@@ -55,6 +55,44 @@ Follow these steps to set up and run the project:
 ### Step 1: Clone the Repository  
 Run the following command in your terminal to clone the project:  
 
-```sh
+```sh  
 git clone https://github.com/your-repo/dance-academy.git
 cd dance-academy
+```
+
+### Step 2: Install Dependencies  
+Run the following command to install all necessary dependencies:  
+
+```sh
+npm install
+```
+
+###  Configure Environment Variables (Optional)
+If your project requires environment variables (e.g., MongoDB connection string, API keys), create a .env file in the root directory and add your configuration:
+
+```sh
+MONGO_URI=your_mongodb_connection_string
+PORT=8000
+```
+
+###  Step 4: Start the MongoDB Server
+Ensure MongoDB is installed and running before starting the backend:
+
+```sh
+mongod
+```
+
+###  Step 5: Run the Application
+Start the Node.js server by running:
+
+```sh
+node app.js
+```
+
+###  Step 6: Open in Browser
+Now, open your web browser and go to:
+
+```sh
+http://localhost:8000
+```
+
