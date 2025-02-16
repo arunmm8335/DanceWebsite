@@ -94,7 +94,7 @@ Now, open your web browser and go to:
 http://localhost:8000
 ```
 
-### Future Enhancements
+## Future Enhancements
 - Implement user authentication with encrypted passwords.  
 - Add real-time chat support for inquiries.
 - Improve the UI/UX with animations and modern design elements.
