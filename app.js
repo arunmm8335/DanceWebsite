@@ -88,15 +88,36 @@ app.get('/contact', requireLogin, (req, res) => {
     res.render('contact.pug');
 });
 
+const fs = require("fs"); // Import file system module
 app.post('/contact', requireLogin, (req, res) => {
+    console.log("Form Data Received:", req.body); // Debugging
+
+    // Convert dob (date) to Date object if needed
+    if (req.body.dob) {
+        req.body.dob = new Date(req.body.dob);
+    }
+
     var myData = new Contact(req.body);
+
     myData.save()
         .then(() => {
+            console.log("Data saved successfully!");
+
+            // Format data for output.txt
+            const logEntry = `Name: ${req.body.myname}, Mother: ${req.body.mother_name}, Father: ${req.body.father_name}, Age: ${req.body.age}, Email: ${req.body.email}, DOB: ${req.body.dob}, More: ${req.body.more}\n`;
+
+            // Append data to output.txt
+            fs.appendFile("output.txt", logEntry, (err) => {
+                if (err) {
+                    console.error("Error writing to file:", err);
+                }
+            });
+
             res.render('contact.pug', { message: 'Your form submitted successfully' });
         })
         .catch((err) => {
-            console.error('Error saving contact:', err);
-            res.status(500).send('Error saving contact details');
+            console.error("Error saving contact:", err);
+            res.status(500).send("Error saving contact details");
         });
 });
 
