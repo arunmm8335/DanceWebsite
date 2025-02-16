@@ -28,7 +28,7 @@ var contactSchema = new mongoose.Schema({
 var Contact = mongoose.model('Contact', contactSchema);
 
 // Middleware setup
-app.use('/static', express.static('static'));
+app.use('/static', express.static(path.join(__dirname, 'static')));
 app.use(express.urlencoded({ extended: true }));
 
 // Setup express-session middleware
@@ -50,7 +50,7 @@ function requireLogin(req, res, next) {
     }
 }
 
-// Routes
+// Routes that don't require login
 app.get('/', (req, res) => {
     res.redirect('/login'); // Redirect to login by default
 });
@@ -62,35 +62,30 @@ app.get('/login', (req, res) => {
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
 
-    // Example authentication logic (replace with your actual authentication)
     if (username === 'admin' && password === 'password') {
         req.session.loggedIn = true;
-        res.redirect('/home'); // Redirect to home page after successful login
+        res.redirect('/home'); // Redirect to home after successful login
     } else {
         res.render('login.pug', { error: 'Invalid username or password' });
     }
 });
 
+// 🟢 Allow public access to 'about' and 'service' pages
+app.get('/about', (req, res) => {
+    res.render('about.pug');
+});
 
+app.get('/service', (req, res) => {
+    res.render('service.pug');
+});
 
+// Routes that require login
 app.get('/home', requireLogin, (req, res) => {
-    const params = {};
-    res.render('home.pug', params);
+    res.render('home.pug');
 });
 
 app.get('/contact', requireLogin, (req, res) => {
-    const params = {};
-    res.render('contact.pug', params);
-});
-
-app.get('/service', requireLogin, (req, res) => {
-    const params = {};
-    res.render('service.pug', params);
-});
-
-app.get('/about', requireLogin, (req, res) => {
-    const params = {};
-    res.render('about.pug', params);
+    res.render('contact.pug');
 });
 
 app.post('/contact', requireLogin, (req, res) => {
@@ -104,6 +99,14 @@ app.post('/contact', requireLogin, (req, res) => {
             res.status(500).send('Error saving contact details');
         });
 });
+
+// Logout route
+app.get('/logout', (req, res) => {
+    req.session.destroy(() => {
+        res.redirect('/login'); // Redirect to login after logout
+    });
+});
+
 
 // Start the server
 app.listen(port, () => {
