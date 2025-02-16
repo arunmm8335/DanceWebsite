@@ -14,8 +14,6 @@ Welcome to the **Dance Academy Website**, a beginner-friendly full-stack web dev
   - [Step 5: Run the Application](#step-5-run-the-application)  
   - [Step 6: Open in Browser](#step-6-open-in-browser)  
 - [Future Enhancements](#future-enhancements)  
-- [Contributors](#contributors)  
-- [License](#license)  
 
 ## Technologies Used  
 The project leverages the following technologies:  
