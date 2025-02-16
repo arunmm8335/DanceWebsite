@@ -49,3 +49,9 @@ Run the following command in your terminal to clone the project:
 ```sh
 git clone https://github.com/your-repo/dance-academy.git
 cd dance-academy
+
+### Step 2: Install Dependencies
+Run the following command to install all necessary dependencies:
+```sh
+npm install
+
