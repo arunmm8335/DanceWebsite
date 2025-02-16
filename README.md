@@ -54,7 +54,7 @@ Follow these steps to set up and run the project:
 Run the following command in your terminal to clone the project:  
 
 ```sh  
-git clone https://github.com/your-repo/dance-academy.git
+https://github.com/arunmm8335/DanceWebsite.git
 cd dance-academy
 ```
 
